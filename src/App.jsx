@@ -9,23 +9,32 @@ const Header = (props) => {
   )
 }
 
+const Part = (props) => {
+  return (
+    <div className="subject">
+      <span className="subject-name">{props.name}</span>
+      <span className="units">{props.exercises} units</span>
+    </div>
+  )
+}
+
 const Content = (props) => {
   return (
     <div className="content">
-      <div className="subject">
-        <span className="subject-name">{props.part1}</span>
-        <span className="units">{props.exercises1} units</span>
-      </div>
+      <Part
+        name={props.part1}
+        exercises={props.exercises1}
+      />
 
-      <div className="subject">
-        <span className="subject-name">{props.part2}</span>
-        <span className="units">{props.exercises2} units</span>
-      </div>
+      <Part
+        name={props.part2}
+        exercises={props.exercises2}
+      />
 
-      <div className="subject">
-        <span className="subject-name">{props.part3}</span>
-        <span className="units">{props.exercises3} units</span>
-      </div>
+      <Part
+        name={props.part3}
+        exercises={props.exercises3}
+      />
     </div>
   )
 }
@@ -50,9 +59,9 @@ const Footer = (props) => {
 }
 
 const App = () => {
-  const course = 'Bachelor of Science in Information Technology'
+  const course = 'CSIT340 - Industry Elective 1'
 
-  const part1 = 'CSIT340 - Industry Elective 1'
+  const part1 = 'Systems Integration and Architecture 1'
   const exercises1 = 3
 
   const part2 = 'CSIT341 - Industry Elective 2'
